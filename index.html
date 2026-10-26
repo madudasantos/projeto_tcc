@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELO | Impacto coletivo</title>
+  <link rel="stylesheet" href="styl">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#inicio">
+    <span class="logo">🤝</span>
+    <strong>ELO</strong>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <nav id="nav">
+    <a href="#ongs">ONGs</a>
+    <a href="#campanhas">Campanhas</a>
+    <a href="#voluntariado">Voluntariado</a>
+    <a href="#conta">Entrar</a>
+    <a class="nav-cta" href="#conta">Cadastrar ONG</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- PÁGINA INICIAL -->
+  <section class="hero section" id="inicio">
+    <div class="hero-copy">
+      <span class="eyebrow">● 14 cidades • Vale do Sinos</span>
+
+      <h1>
+        Conectando quem quer ajudar às
+        <span>causas que transformam vidas.</span>
+      </h1>
+
+      <p>
+        O ELO conecta organizações sociais, empresas,
+        voluntários e doadores das 14 cidades do Vale
+        do Sinos, tornando a solidariedade mais acessível,
+        transparente e eficiente.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="#ongs">Conheça as ONGs →</a>
+        <a class="button secondary" href="#voluntariado">
+          Quero ser voluntário
+        </a>
+      </div>
+
+      <div class="trust">
+        <span>♧ ONGs verificadas</span>
+        <span>⌁ Impacto rastreável</span>
+      </div>
+    </div>
+
+    <div class="hero-art" role="img"
+      aria-label="Ilustração abstrata de pessoas conectadas">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="network">✧　·　✦<br>　·　✧　·<br>✦　·　✧</div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE ONGS -->
+  <section class="section" id="ongs">
+    <div class="section-heading">
+      <span class="eyebrow orange">ORGANIZAÇÕES</span>
+      <h2>Catálogo de ONGs</h2>
+      <p>
+        Instituições verificadas fazendo a diferença
+        nas 14 cidades do Vale dos Sinos.
+      </p>
+    </div>
+
+    <div class="filters">
+      <input id="searchOng" type="search"
+        placeholder="⌕ Buscar por nome, causa ou cidade...">
+
+      <select id="causeFilter" aria-label="Filtrar por causa">
+        <option value="">Todas</option>
+        <option>Assistência social</option>
+        <option>Infância</option>
+        <option>Proteção animal</option>
+        <option>Educação</option>
+        <option>Moradia</option>
+        <option>Alimentação</option>
+      </select>
+    </div>
+
+    <p class="small" id="ongCount">
+      8 organizações encontradas
+    </p>
+
+    <div class="cards" id="ongCards">
+
+      <article class="card ong-card"
+        data-name="Instituto Aconchego"
+        data-cause="Assistência social"
+        data-city="Novo Hamburgo">
+        <div class="round-icon">♡</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Instituto Aconchego</h3>
+        <p>Assistência social</p>
+        <div class="meta">
+          <span>⌖ Novo Hamburgo</span>
+          <span>♙ 84</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Casa Esperança"
+        data-cause="Infância"
+        data-city="São Leopoldo">
+        <div class="round-icon">☼</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Casa Esperança</h3>
+        <p>Infância</p>
+        <div class="meta">
+          <span>⌖ São Leopoldo</span>
+          <span>♙ 132</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Patinhas do Vale"
+        data-cause="Proteção animal"
+        data-city="Campo Bom">
+        <div class="round-icon">♧</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Patinhas do Vale</h3>
+        <p>Proteção animal</p>
+        <div class="meta">
+          <span>⌖ Campo Bom</span>
+          <span>♙ 56</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Educar+"
+        data-cause="Educação"
+        data-city="Estância Velha">
+        <div class="round-icon">⚑</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Educar+</h3>
+        <p>Educação</p>
+        <div class="meta">
+          <span>⌖ Estância Velha</span>
+          <span>♙ 71</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Moradia Digna"
+        data-cause="Moradia"
+        data-city="Sapiranga">
+        <div class="round-icon">⌂</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Moradia Digna</h3>
+        <p>Moradia</p>
+        <div class="meta">
+          <span>⌖ Sapiranga</span>
+          <span>♙ 43</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Mesa Solidária"
+        data-cause="Alimentação"
+        data-city="Sapucaia do Sul">
+        <div class="round-icon">♨</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Mesa Solidária</h3>
+        <p>Alimentação</p>
+        <div class="meta">
+          <span>⌖ Sapucaia do Sul</span>
+          <span>♙ 98</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Novo Amanhã"
+        data-cause="Educação"
+        data-city="Sapiranga">
+        <div class="round-icon">✦</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Novo Amanhã</h3>
+        <p>Educação</p>
+        <div class="meta">
+          <span>⌖ Sapiranga</span>
+          <span>♙ 62</span>
+        </div>
+      </article>
+
+      <article class="card ong-card"
+        data-name="Rede Mãos Unidas"
+        data-cause="Assistência social"
+        data-city="São Leopoldo">
+        <div class="round-icon">♡</div>
+        <span class="verified">♢ Verificada</span>
+        <h3>Rede Mãos Unidas</h3>
+        <p>Assistência social</p>
+        <div class="meta">
+          <span>⌖ São Leopoldo</span>
+          <span>♙ 105</span>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="empty hidden" id="emptyOng">
+      Nenhuma ONG encontrada com esses filtros.
+    </p>
+  </section>
+
+  <!-- CAMPANHAS -->
+  <section class="section" id="campanhas">
+    <div class="section-heading">
+      <span class="eyebrow orange">ARRECADAÇÃO</span>
+      <h2>Campanhas ativas</h2>
+      <p>
+        Metas claras, prazos definidos e prestação
+        de contas em cada campanha.
+      </p>
+    </div>
+
+    <div class="cards campaign-grid">
+
+      <article class="card campaign-card">
+        <div class="campaign-art art-one">
+          <span>Emergencial</span>
+          <span>▣ 12 dias</span>
+        </div>
+        <div class="campaign-content">
+          <div class="meta">Instituto Aconchego • Novo Hamburgo</div>
+          <h3>Inverno Solidário 2026</h3>
+          <p>
+            Cobertores, agasalhos e aquecedores para
+            400 famílias durante o inverno.
+          </p>
+          <div class="progress-label">
+            <span>Meta R$ 40.000</span>
+            <strong>62%</strong>
+          </div>
+          <div class="progress">
+            <span style="width:62%"></span>
+          </div>
+          <button class="button full donate"
+            data-campaign="Inverno Solidário 2026">
+            Doar agora
+          </button>
+        </div>
+      </article>
+
+      <article class="card campaign-card">
+        <div class="campaign-art art-two">
+          <span>Alimentação</span>
+          <span>▣ 8 dias</span>
+        </div>
+        <div class="campaign-content">
+          <div class="meta">Rede Mãos Unidas • São Leopoldo</div>
+          <h3>Alimente uma Família</h3>
+          <p>
+            Cestas básicas mensais para famílias em
+            insegurança alimentar.
+          </p>
+          <div class="progress-label">
+            <span>Meta R$ 25.000</span>
+            <strong>84%</strong>
+          </div>
+          <div class="progress">
+            <span style="width:84%"></span>
+          </div>
+          <button class="button full donate"
+            data-campaign="Alimente uma Família">
+            Doar agora
+          </button>
+        </div>
+      </article>
+
+      <article class="card campaign-card">
+        <div class="campaign-art art-three">
+          <span>Educação</span>
+          <span>▣ 22 dias</span>
+        </div>
+        <div class="campaign-content">
+          <div class="meta">ONG Novo Amanhã • Sapiranga</div>
+          <h3>Educação que Liberta</h3>
+          <p>
+            Bolsas de estudo e material escolar para
+            120 jovens do ensino médio.
+          </p>
+          <div class="progress-label">
+            <span>Meta R$ 80.000</span>
+            <strong>41%</strong>
+          </div>
+          <div class="progress">
+            <span style="width:41%"></span>
+          </div>
+          <button class="button full donate"
+            data-campaign="Educação que Liberta">
+            Doar agora
+          </button>
+        </div>
+      </article>
+
+      <article class="card campaign-card">
+        <div class="campaign-art art-four">
+          <span>Animais</span>
+          <span>▣ 15 dias</span>
+        </div>
+        <div class="campaign-content">
+          <div class="meta">Patinhas do Vale • Campo Bom</div>
+          <h3>Castração Solidária</h3>
+          <p>
+            Mutirão de castração de 300 animais
+            em bairros periféricos.
+          </p>
+          <div class="progress-label">
+            <span>Meta R$ 18.000</span>
+            <strong>55%</strong>
+          </div>
+          <div class="progress">
+            <span style="width:55%"></span>
+          </div>
+          <button class="button full donate"
+            data-campaign="Castração Solidária">
+            Doar agora
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- VOLUNTARIADO -->
+  <section class="section" id="voluntariado">
+    <div class="section-heading">
+      <span class="eyebrow orange">DOE SEU TEMPO</span>
+      <h2>Vagas de voluntariado</h2>
+      <p>
+        Escolha uma causa, defina sua disponibilidade
+        e comece a transformar sua cidade.
+      </p>
+    </div>
+
+    <div class="cards volunteer-grid">
+
+      <article class="card volunteer-card">
+        <h3>Professor(a) voluntário de reforço</h3>
+        <p>Casa Esperança</p>
+        <div class="meta">
+          <span>⌖ São Leopoldo</span>
+          <span>4h/semana</span>
+          <span>8 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Professor(a) voluntário de reforço">
+          Quero me candidatar
+        </button>
+      </article>
+
+      <article class="card volunteer-card">
+        <h3>Lar temporário para animais</h3>
+        <p>Patinhas do Vale</p>
+        <div class="meta">
+          <span>⌖ Campo Bom</span>
+          <span>Flexível</span>
+          <span>10 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Lar temporário para animais">
+          Quero me candidatar
+        </button>
+      </article>
+
+      <article class="card volunteer-card">
+        <h3>Mentor de carreira para jovens</h3>
+        <p>Educar+</p>
+        <div class="meta">
+          <span>⌖ Estância Velha</span>
+          <span>2h/semana</span>
+          <span>8 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Mentor de carreira para jovens">
+          Quero me candidatar
+        </button>
+      </article>
+
+      <article class="card volunteer-card">
+        <h3>Motorista para coleta de alimentos</h3>
+        <p>Mesa Solidária</p>
+        <div class="meta">
+          <span>⌖ Sapucaia do Sul</span>
+          <span>6h/semana</span>
+          <span>3 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Motorista para coleta de alimentos">
+          Quero me candidatar
+        </button>
+      </article>
+
+      <article class="card volunteer-card">
+        <h3>Plantio de mudas nativas</h3>
+        <p>Vale Verde</p>
+        <div class="meta">
+          <span>⌖ Ivoti</span>
+          <span>Sábados</span>
+          <span>20 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Plantio de mudas nativas">
+          Quero me candidatar
+        </button>
+      </article>
+
+      <article class="card volunteer-card">
+        <h3>Apoio administrativo</h3>
+        <p>Rede Direita</p>
+        <div class="meta">
+          <span>⌖ Canoas</span>
+          <span>3h/semana</span>
+          <span>4 vagas</span>
+        </div>
+        <button class="button full volunteer"
+          data-role="Apoio administrativo">
+          Quero me candidatar
+        </button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LOGIN E CADASTRO -->
+  <section class="section account-section" id="conta">
+    <div class="account-copy">
+      <h2>Bem-vindo ao <span>ELO</span></h2>
+      <p>
+        Uma conta, quatro formas de participar: doe,
+        seja voluntário, cadastre sua organização ou
+        leve o impacto social para sua empresa.
+        Tudo com transparência e verificação.
+      </p>
+      <ul>
+        <li>120+ organizações verificadas</li>
+        <li>14 cidades do Vale dos Sinos</li>
+        <li>Prestação de contas pública</li>
+      </ul>
+    </div>
+
+    <div class="account-box">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Entrar</button>
+        <button class="tab" data-tab="register">Criar conta</button>
+      </div>
+
+      <form id="loginForm" class="account-form">
+        <label for="loginEmail">E-mail</label>
+        <input id="loginEmail" type="email"
+          placeholder="E-mail" required>
+
+        <label for="loginPassword">Senha</label>
+        <input id="loginPassword" type="password"
+          placeholder="Senha" minlength="4" required>
+
+        <button class="button full" type="submit">Entrar</button>
+
+        <button class="button secondary full"
+          type="button" id="googleLogin">
+          Continuar com Google
+        </button>
+      </form>
+
+      <form id="registerForm" class="account-form hidden">
+        <div class="role-select">
+          <label><input type="radio" name="role"
+            value="Doador" checked> Doador</label>
+          <label><input type="radio" name="role"
+            value="Voluntário"> Voluntário</label>
+          <label><input type="radio" name="role"
+            value="ONG"> ONG</label>
+          <label><input type="radio" name="role"
+            value="Empresa"> Empresa</label>
+        </div>
+
+        <label for="fullName">Nome completo</label>
+        <input id="fullName" type="text"
+          placeholder="Nome completo" required>
+
+        <label for="registerEmail">E-mail</label>
+        <input id="registerEmail" type="email"
+          placeholder="E-mail" required>
+
+        <label for="registerPassword">Senha</label>
+        <input id="registerPassword" type="password"
+          placeholder="Crie uma senha (mínimo 4 caracteres)"
+          minlength="4" required>
+
+        <button class="button full" type="submit">
+          Criar conta
+        </button>
+      </form>
+
+      <p class="terms">
+        Ao continuar você aceita os termos de uso do ELO.
+        <a href="#inicio">Voltar ao início</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand" href="#inicio">
+    <span class="logo">🤝</span>
+    <strong>ELO</strong>
+  </a>
+
+  <p>
+    Conectando quem quer ajudar a quem realmente precisa,
+    nas 14 cidades do Vale dos Sinos.
+  </p>
+
+  <div>
+    <a href="#ongs">ONGs</a>
+    <a href="#campanhas">Campanhas</a>
+    <a href="#voluntariado">Voluntariado</a>
+    <a href="#conta">Entrar</a>
+  </div>
+</footer>
+
+<!-- JANELA DE DOAÇÃO -->
+<dialog id="donationDialog">
+  <form method="dialog" id="donationForm">
+    <button class="dialog-close" aria-label="Fechar">×</button>
+
+    <span class="eyebrow orange">SUA DOAÇÃO</span>
+    <h2>Fazer uma doação</h2>
+    <p>Para <strong id="chosenCampaign">Inverno Solidário 2026</strong></p>
+
+    <div class="step-row">
+      <span>1</span><i></i><span>2</span><i></i><span>3</span>
+    </div>
+
+    <label>Escolha um valor</label>
+
+    <div class="amounts">
+      <button type="button" class="amount active" data-amount="25">R$ 25</button>
+      <button type="button" class="amount" data-amount="50">R$ 50</button>
+      <button type="button" class="amount" data-amount="100">R$ 100</button>
+      <button type="button" class="amount" data-amount="250">R$ 250</button>
+    </div>
+
+    <input id="customAmount" type="number"
+      min="1" value="25" required
+      aria-label="Valor da doação em reais">
+
+    <label class="monthly">
+      <input type="checkbox" id="monthly">
+      Quero doar todo mês
+    </label>
+
+    <button class="button full" type="submit">Continuar</button>
+
+    <p class="small">
+      Demonstração acadêmica: nenhum pagamento real será realizado.
+    </p>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
